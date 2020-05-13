@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bibl));
-            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem21 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem("");
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonDel = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
@@ -70,8 +70,9 @@
             // 
             // buttonDel
             // 
-            this.buttonDel.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.buttonDel.Font = new System.Drawing.Font("Roboto Black", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.buttonDel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonDel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonDel.Location = new System.Drawing.Point(693, 405);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(75, 23);
@@ -82,8 +83,9 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.buttonEdit.Font = new System.Drawing.Font("Roboto Black", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.buttonEdit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonEdit.Location = new System.Drawing.Point(583, 405);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
@@ -94,8 +96,9 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.buttonAdd.Font = new System.Drawing.Font("Roboto Black", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.buttonAdd.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonAdd.Location = new System.Drawing.Point(468, 405);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
@@ -194,20 +197,20 @@
             this.Телефон,
             this.Почта});
             this.listViewBibl.HideSelection = false;
-            listViewItem19.Tag = "Id";
-            listViewItem20.IndentCount = 1;
-            listViewItem20.Tag = "FirstName";
-            listViewItem21.Tag = "MiddleName";
-            listViewItem22.Tag = "LastName";
-            listViewItem23.Tag = "Phone";
-            listViewItem24.Tag = "Email";
+            listViewItem13.Tag = "Id";
+            listViewItem14.IndentCount = 1;
+            listViewItem14.Tag = "FirstName";
+            listViewItem15.Tag = "MiddleName";
+            listViewItem16.Tag = "LastName";
+            listViewItem17.Tag = "Phone";
+            listViewItem18.Tag = "Email";
             this.listViewBibl.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem19,
-            listViewItem20,
-            listViewItem21,
-            listViewItem22,
-            listViewItem23,
-            listViewItem24});
+            listViewItem13,
+            listViewItem14,
+            listViewItem15,
+            listViewItem16,
+            listViewItem17,
+            listViewItem18});
             this.listViewBibl.Location = new System.Drawing.Point(205, 155);
             this.listViewBibl.Name = "listViewBibl";
             this.listViewBibl.Size = new System.Drawing.Size(583, 244);

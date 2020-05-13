@@ -51,22 +51,26 @@
             // 
             // buttonOK
             // 
+            this.buttonOK.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonOK.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonOK.Location = new System.Drawing.Point(12, 258);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 51;
             this.buttonOK.Text = "Войти";
-            this.buttonOK.UseVisualStyleBackColor = true;
+            this.buttonOK.UseVisualStyleBackColor = false;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
             // buttonCancel
             // 
+            this.buttonCancel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonCancel.Location = new System.Drawing.Point(156, 258);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 52;
             this.buttonCancel.Text = "Отмена";
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.UseVisualStyleBackColor = false;
             // 
             // textBoxLogin
             // 

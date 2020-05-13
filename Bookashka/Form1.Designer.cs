@@ -48,42 +48,50 @@
             // 
             // buttonOpenBibl
             // 
+            this.buttonOpenBibl.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonOpenBibl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonOpenBibl.Location = new System.Drawing.Point(12, 150);
             this.buttonOpenBibl.Name = "buttonOpenBibl";
             this.buttonOpenBibl.Size = new System.Drawing.Size(372, 44);
             this.buttonOpenBibl.TabIndex = 1;
             this.buttonOpenBibl.Text = "Библиотекари";
-            this.buttonOpenBibl.UseVisualStyleBackColor = true;
+            this.buttonOpenBibl.UseVisualStyleBackColor = false;
             this.buttonOpenBibl.Click += new System.EventHandler(this.buttonOpenBibl_Click);
             // 
             // buttonOpenChit
             // 
+            this.buttonOpenChit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonOpenChit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonOpenChit.Location = new System.Drawing.Point(12, 224);
             this.buttonOpenChit.Name = "buttonOpenChit";
             this.buttonOpenChit.Size = new System.Drawing.Size(372, 44);
             this.buttonOpenChit.TabIndex = 2;
             this.buttonOpenChit.Text = "Читатели";
-            this.buttonOpenChit.UseVisualStyleBackColor = true;
+            this.buttonOpenChit.UseVisualStyleBackColor = false;
             this.buttonOpenChit.Click += new System.EventHandler(this.buttonOpenChit_Click);
             // 
             // buttonOpenBook
             // 
+            this.buttonOpenBook.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonOpenBook.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonOpenBook.Location = new System.Drawing.Point(12, 294);
             this.buttonOpenBook.Name = "buttonOpenBook";
             this.buttonOpenBook.Size = new System.Drawing.Size(372, 44);
             this.buttonOpenBook.TabIndex = 3;
             this.buttonOpenBook.Text = "Книги";
-            this.buttonOpenBook.UseVisualStyleBackColor = true;
+            this.buttonOpenBook.UseVisualStyleBackColor = false;
             this.buttonOpenBook.Click += new System.EventHandler(this.buttonOpenBook_Click);
             // 
             // buttonOpenUchet
             // 
+            this.buttonOpenUchet.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonOpenUchet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonOpenUchet.Location = new System.Drawing.Point(12, 360);
             this.buttonOpenUchet.Name = "buttonOpenUchet";
             this.buttonOpenUchet.Size = new System.Drawing.Size(372, 44);
             this.buttonOpenUchet.TabIndex = 4;
             this.buttonOpenUchet.Text = "Учет";
-            this.buttonOpenUchet.UseVisualStyleBackColor = true;
+            this.buttonOpenUchet.UseVisualStyleBackColor = false;
             this.buttonOpenUchet.Click += new System.EventHandler(this.buttonOpenUchet_Click);
             // 
             // Form1

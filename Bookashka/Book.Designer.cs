@@ -114,32 +114,38 @@
             // 
             // buttonAdd
             // 
+            this.buttonAdd.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonAdd.Location = new System.Drawing.Point(461, 397);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonAdd.TabIndex = 58;
             this.buttonAdd.Text = "Создать";
-            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonEdit
             // 
+            this.buttonEdit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonEdit.Location = new System.Drawing.Point(577, 397);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit.TabIndex = 59;
             this.buttonEdit.Text = "Изменить";
-            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.UseVisualStyleBackColor = false;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonDel
             // 
+            this.buttonDel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonDel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonDel.Location = new System.Drawing.Point(690, 397);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(75, 23);
             this.buttonDel.TabIndex = 60;
             this.buttonDel.Text = "Удалить";
-            this.buttonDel.UseVisualStyleBackColor = true;
+            this.buttonDel.UseVisualStyleBackColor = false;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
             // textBoxName

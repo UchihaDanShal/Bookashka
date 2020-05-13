@@ -38,6 +38,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listViewUchet = new System.Windows.Forms.ListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Bibl = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.IdBibl = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Chit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.IdChit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Book = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.comboBoxBibl = new System.Windows.Forms.ComboBox();
             this.comboBoxChit = new System.Windows.Forms.ComboBox();
             this.comboBoxBook = new System.Windows.Forms.ComboBox();
@@ -47,11 +52,6 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
-            this.Bibl = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.IdBibl = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Chit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.IdChit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Book = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +101,34 @@
             this.ID.Tag = "Id";
             this.ID.Text = "ID";
             this.ID.Width = 31;
+            // 
+            // Bibl
+            // 
+            this.Bibl.Tag = "Bibl";
+            this.Bibl.Text = "Библиотекарь";
+            this.Bibl.Width = 105;
+            // 
+            // IdBibl
+            // 
+            this.IdBibl.Tag = "IdBibl";
+            this.IdBibl.Text = "Id библиотекаря";
+            this.IdBibl.Width = 92;
+            // 
+            // Chit
+            // 
+            this.Chit.Tag = "Chit";
+            this.Chit.Text = "Читатель";
+            this.Chit.Width = 79;
+            // 
+            // IdChit
+            // 
+            this.IdChit.Tag = "IdChit";
+            this.IdChit.Text = "Id читателя";
+            // 
+            // Book
+            // 
+            this.Book.Tag = "Book";
+            this.Book.Text = "Книга";
             // 
             // comboBoxBibl
             // 
@@ -155,61 +183,39 @@
             // 
             // buttonAdd
             // 
+            this.buttonAdd.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonAdd.Location = new System.Drawing.Point(474, 383);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonAdd.TabIndex = 65;
             this.buttonAdd.Text = "Создать";
-            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click_1);
             // 
             // buttonEdit
             // 
+            this.buttonEdit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonEdit.Location = new System.Drawing.Point(583, 383);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit.TabIndex = 66;
             this.buttonEdit.Text = "Изменить";
-            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.UseVisualStyleBackColor = false;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonDel
             // 
+            this.buttonDel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonDel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonDel.Location = new System.Drawing.Point(690, 383);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(75, 23);
             this.buttonDel.TabIndex = 67;
             this.buttonDel.Text = "Удалить";
-            this.buttonDel.UseVisualStyleBackColor = true;
+            this.buttonDel.UseVisualStyleBackColor = false;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
-            // 
-            // Bibl
-            // 
-            this.Bibl.Tag = "Bibl";
-            this.Bibl.Text = "Библиотекарь";
-            this.Bibl.Width = 105;
-            // 
-            // IdBibl
-            // 
-            this.IdBibl.Tag = "IdBibl";
-            this.IdBibl.Text = "Id библиотекаря";
-            this.IdBibl.Width = 92;
-            // 
-            // Chit
-            // 
-            this.Chit.Tag = "Chit";
-            this.Chit.Text = "Читатель";
-            this.Chit.Width = 79;
-            // 
-            // IdChit
-            // 
-            this.IdChit.Tag = "IdChit";
-            this.IdChit.Text = "Id читателя";
-            // 
-            // Book
-            // 
-            this.Book.Tag = "Book";
-            this.Book.Text = "Книга";
             // 
             // Uchet
             // 
