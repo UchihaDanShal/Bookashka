@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище BookashkaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BiblSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="MiddleName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="BookSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Genre" Type="nvarchar(max)" />
+          <Property Name="Author" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ChitSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="MiddleName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="UchetSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdBibl" Type="int" Nullable="false" />
+          <Property Name="IdChit" Type="int" Nullable="false" />
+          <Property Name="IdBook" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_UchetSet_BiblSet">
+          <End Role="BiblSet" Type="Self.BiblSet" Multiplicity="1" />
+          <End Role="UchetSet" Type="Self.UchetSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BiblSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UchetSet">
+              <PropertyRef Name="IdBibl" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UchetSet_BookSet">
+          <End Role="BookSet" Type="Self.BookSet" Multiplicity="1" />
+          <End Role="UchetSet" Type="Self.UchetSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BookSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UchetSet">
+              <PropertyRef Name="IdBook" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UchetSet_ChitSet">
+          <End Role="ChitSet" Type="Self.ChitSet" Multiplicity="1" />
+          <End Role="UchetSet" Type="Self.UchetSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChitSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UchetSet">
+              <PropertyRef Name="IdChit" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище BookashkaModelContainer">
+          <EntitySet Name="BiblSet" EntityType="Self.BiblSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BookSet" EntityType="Self.BookSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChitSet" EntityType="Self.ChitSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UchetSet" EntityType="Self.UchetSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_UchetSet_BiblSet" Association="Self.FK_UchetSet_BiblSet">
+            <End Role="BiblSet" EntitySet="BiblSet" />
+            <End Role="UchetSet" EntitySet="UchetSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UchetSet_BookSet" Association="Self.FK_UchetSet_BookSet">
+            <End Role="BookSet" EntitySet="BookSet" />
+            <End Role="UchetSet" EntitySet="UchetSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UchetSet_ChitSet" Association="Self.FK_UchetSet_ChitSet">
+            <End Role="ChitSet" EntitySet="ChitSet" />
+            <End Role="UchetSet" EntitySet="UchetSet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BookashkaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BiblSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="UchetSet" Relationship="Self.FK_UchetSet_BiblSet" FromRole="BiblSet" ToRole="UchetSet" />
+        </EntityType>
+        <EntityType Name="BookSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Genre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="UchetSet" Relationship="Self.FK_UchetSet_BookSet" FromRole="BookSet" ToRole="UchetSet" />
+        </EntityType>
+        <EntityType Name="ChitSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="UchetSet" Relationship="Self.FK_UchetSet_ChitSet" FromRole="ChitSet" ToRole="UchetSet" />
+        </EntityType>
+        <EntityType Name="UchetSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdBibl" Type="Int32" Nullable="false" />
+          <Property Name="IdChit" Type="Int32" Nullable="false" />
+          <Property Name="IdBook" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BiblSet" Relationship="Self.FK_UchetSet_BiblSet" FromRole="UchetSet" ToRole="BiblSet" />
+          <NavigationProperty Name="BookSet" Relationship="Self.FK_UchetSet_BookSet" FromRole="UchetSet" ToRole="BookSet" />
+          <NavigationProperty Name="ChitSet" Relationship="Self.FK_UchetSet_ChitSet" FromRole="UchetSet" ToRole="ChitSet" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_UchetSet_BiblSet">
+          <End Role="BiblSet" Type="Self.BiblSet" Multiplicity="1" />
+          <End Role="UchetSet" Type="Self.UchetSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BiblSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UchetSet">
+              <PropertyRef Name="IdBibl" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UchetSet_BookSet">
+          <End Role="BookSet" Type="Self.BookSet" Multiplicity="1" />
+          <End Role="UchetSet" Type="Self.UchetSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BookSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UchetSet">
+              <PropertyRef Name="IdBook" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UchetSet_ChitSet">
+          <End Role="ChitSet" Type="Self.ChitSet" Multiplicity="1" />
+          <End Role="UchetSet" Type="Self.UchetSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChitSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UchetSet">
+              <PropertyRef Name="IdChit" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BookashkaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BiblSet" EntityType="Self.BiblSet" />
+          <EntitySet Name="BookSet" EntityType="Self.BookSet" />
+          <EntitySet Name="ChitSet" EntityType="Self.ChitSet" />
+          <EntitySet Name="UchetSet" EntityType="Self.UchetSet" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+          <AssociationSet Name="FK_UchetSet_BiblSet" Association="Self.FK_UchetSet_BiblSet">
+            <End Role="BiblSet" EntitySet="BiblSet" />
+            <End Role="UchetSet" EntitySet="UchetSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UchetSet_BookSet" Association="Self.FK_UchetSet_BookSet">
+            <End Role="BookSet" EntitySet="BookSet" />
+            <End Role="UchetSet" EntitySet="UchetSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UchetSet_ChitSet" Association="Self.FK_UchetSet_ChitSet">
+            <End Role="ChitSet" EntitySet="ChitSet" />
+            <End Role="UchetSet" EntitySet="UchetSet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище BookashkaModelContainer" CdmEntityContainer="BookashkaEntities">
+          <EntitySetMapping Name="BiblSet">
+            <EntityTypeMapping TypeName="BookashkaModel.BiblSet">
+              <MappingFragment StoreEntitySet="BiblSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BookSet">
+            <EntityTypeMapping TypeName="BookashkaModel.BookSet">
+              <MappingFragment StoreEntitySet="BookSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Genre" ColumnName="Genre" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChitSet">
+            <EntityTypeMapping TypeName="BookashkaModel.ChitSet">
+              <MappingFragment StoreEntitySet="ChitSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UchetSet">
+            <EntityTypeMapping TypeName="BookashkaModel.UchetSet">
+              <MappingFragment StoreEntitySet="UchetSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdBibl" ColumnName="IdBibl" />
+                <ScalarProperty Name="IdChit" ColumnName="IdChit" />
+                <ScalarProperty Name="IdBook" ColumnName="IdBook" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="BookashkaModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
